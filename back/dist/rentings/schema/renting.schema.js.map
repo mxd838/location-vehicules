@@ -1,0 +1,1 @@
+{"version":3,"file":"renting.schema.js","sourceRoot":"","sources":["../../../src/rentings/schema/renting.schema.ts"],"names":[],"mappings":";;;AAAA,qCAAqC;AAExB,QAAA,aAAa,GAAG,IAAI,QAAQ,CAAC,MAAM,CAAC;IAC/C,SAAS,EAAE,MAAM;IACjB,QAAQ,EAAE,MAAM;IAChB,SAAS,EAAE,MAAM;IACjB,OAAO,EAAE,MAAM;CAChB,CAAC,CAAC"}

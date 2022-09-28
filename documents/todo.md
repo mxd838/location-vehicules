@@ -2,6 +2,7 @@
 ## Front
 - pass props to each component which requires some
 - axios(or fetch requests)
+- route 404
 ## Back
 - configure CRUDs
 - verifier psce ou non id dans dto/interface/schema
