@@ -1,34 +1,45 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Put,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { RentingsService } from './rentings.service';
 import { CreateRentingDto } from './dto/create-renting.dto';
-import { UpdateRentingDto } from './dto/update-renting.dto';
+import { Renting } from './interface/renting.interface';
 
 @Controller('rentings')
 export class RentingsController {
   constructor(private readonly rentingsService: RentingsService) {}
 
   @Post()
-  create(@Body() createRentingDto: CreateRentingDto) {
+  create(@Body() createRentingDto: CreateRentingDto): Promise<Renting> {
     return this.rentingsService.create(createRentingDto);
   }
 
   @Get()
-  findAll() {
+  findAll(): Promise<Renting[]> {
     return this.rentingsService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id): Promise<Renting> {
     return this.rentingsService.findOne(+id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateRentingDto: UpdateRentingDto) {
+  @Put(':id')
+  update(
+    @Param('id') id: string,
+    @Body() updateRentingDto: CreateRentingDto,
+  ): Promise<Renting> {
     return this.rentingsService.update(+id, updateRentingDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.rentingsService.remove(+id);
+  delete(@Param('id') id: string) {
+    return this.rentingsService.delete(+id);
   }
 }

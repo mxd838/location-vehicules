@@ -22,11 +22,11 @@ export class ClientsService {
     return await this.clientModel.findById({ _id: id });
   }
 
-  update(id: number, updateClientDto: UpdateClientDto) {
-    return `This action updates a #${id} client`;
+  async update(id: number, client: Client): Promise<Client> {
+    return await this.clientModel.findByIdAndUpdate(id, client, { new: true });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} client`;
+  async delete(id: number): Promise<Client> {
+    return await this.clientModel.findByIdAndRemove(id);
   }
 }

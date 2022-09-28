@@ -1,26 +1,34 @@
 import { Injectable } from '@nestjs/common';
-import { CreateRentingDto } from './dto/create-renting.dto';
-import { UpdateRentingDto } from './dto/update-renting.dto';
+import { Renting } from './interface/renting.interface';
+import { Model } from 'mongoose';
+import { InjectModel } from '@nestjs/mongoose';
 
 @Injectable()
 export class RentingsService {
-  create(createRentingDto: CreateRentingDto) {
-    return 'This action adds a new renting';
+  constructor(
+    @InjectModel('Renting') private readonly rentingModel: Model<Renting>,
+  ) {}
+
+  async create(renting: Renting): Promise<Renting> {
+    const newRenting = new this.rentingModel(renting);
+    return await newRenting.save();
   }
 
-  findAll() {
-    return `This action returns all rentings`;
+  async findAll(): Promise<Renting[]> {
+    return await this.rentingModel.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} renting`;
+  async findOne(id: number): Promise<Renting> {
+    return await this.rentingModel.findById({ _id: id });
   }
 
-  update(id: number, updateRentingDto: UpdateRentingDto) {
-    return `This action updates a #${id} renting`;
+  async update(id: number, renting: Renting): Promise<Renting> {
+    return await this.rentingModel.findByIdAndUpdate(id, renting, {
+      new: true,
+    });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} renting`;
+  async delete(id: number): Promise<Renting> {
+    return await this.rentingModel.findByIdAndRemove(id);
   }
 }
