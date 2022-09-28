@@ -1,0 +1,14 @@
+GET http://localhost:3000/vehicles
+
+###
+POST http://localhost:3000/vehicles
+content-type: application/json
+
+{
+    "type": "berline",
+    "brand": "mattel",
+    "model": "lettam",
+    "licensePlate": "MD-143-DM",
+    "state": "B",
+    "pricePerDay": 150
+}

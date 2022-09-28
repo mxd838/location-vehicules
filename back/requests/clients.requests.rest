@@ -1,0 +1,13 @@
+GET http://localhost:3000/clients
+
+###
+POST http://localhost:3000/clients
+content-type: application/json
+
+{
+    "lastName": "Martin",
+    "firstName": "Martine",
+    "birthdate": "19790506",
+    "email": "martin.martine@gmail.com",
+    "phone": "+331234567890"
+}

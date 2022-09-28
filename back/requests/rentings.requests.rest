@@ -1,0 +1,13 @@
+GET http://localhost:3000/rentings
+
+###
+
+POST http://localhost:3000/rentings
+content-type: application/json
+
+{
+    "vehicleId": "452452",
+    "clientId": "452470",
+    "beginDate": "20221231",
+    "endDate": "20230102"
+}
