@@ -6,5 +6,4 @@ export interface Vehicle {
   licensePlate: string;
   state: string;
   pricePerDay: number;
-  availability: boolean;
 }
