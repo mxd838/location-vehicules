@@ -1,9 +1,23 @@
+import { useEffect, useState } from "react"
+import ClientsService from "../../services/Clients.service"
+import { Client } from "../../models/Client"
 import Nav from "../../components/layout/nav/Nav"
+
 const Clients = () => {
+  const [clientsData, setClientsData] = useState<Client[]>([])
+
+  useEffect(() => {
+    ClientsService.getAll().then((response) => console.log(response))
+    // .catch((err) => console.log(err))
+    // .then((data) => setClientsData(data))
+  }, [])
   return (
     <>
       <h2>Clients</h2>
       <Nav />
+      {clientsData.map((clientData) => {
+        return <div>clientData</div>
+      })}
     </>
   )
 }
