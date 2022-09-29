@@ -8,12 +8,12 @@ const Table = ({ type, tableData }: any) => {
   if (type === "clients") {
     columnNames = ["Nom", "Prénom", "Date de naissance", "E-mail", "Téléphone"]
   } else if (type === "rentings") {
+    columnNames = ["Véhicule", "Client", "Date début", "Date fin"]
   }
   console.log(tableData)
   return (
     <>
       <h2>Table</h2>
-      <HeaderRow />
       {columnNames.map((columnName: any, index: string) => (
         <HeaderRow key={columnName} name={columnName} />
       ))}
