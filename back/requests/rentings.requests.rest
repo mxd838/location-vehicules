@@ -11,3 +11,19 @@ content-type: application/json
     "beginDate": "20221231",
     "endDate": "20230102"
 }
+
+###
+GET http://localhost:3000/rentings/633497df56c62d12e6ee46ca
+
+
+###
+PUT http://localhost:3000/rentings/633497df56c62d12e6ee46ca
+content-type: application/json
+
+{
+    "endDate": "20220104"
+}
+
+###
+DELETE http://localhost:3000/rentings/633497df56c62d12e6ee46ca
+
