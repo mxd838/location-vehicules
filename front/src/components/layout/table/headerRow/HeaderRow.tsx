@@ -1,7 +1,7 @@
-const HeaderRow = () => {
+const HeaderRow = (props: any) => {
   return (
     <>
-      <h4>Header Row</h4>
+      <div>{props.name}</div>
     </>
   )
 }
