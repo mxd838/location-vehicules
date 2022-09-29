@@ -1,17 +1,17 @@
 <!-- TODO -->
 ## Front
-- pass props to each component which requires some
+- [X] pass props to each component which requires some
     - on each page, get corresponding data with axios
     - pass all the data (getAll) to table as props
     - pass each line of data to data row
         - pass each value of data to data cell
-- typer toutes les props correctement
-- route 404
+- [ ] typer toutes les props correctement
+- [ ] route 404
 ## Back
-- verifier psce ou non id dans dto/interface/schema
+- [ ]   verifier psce ou non id dans dto/interface/schema
 ## Config
-- docker compose
-- connect back to database
+- [ ] docker compose
+- [ ] connect back to database
 
 <!-- FIXME -->
 - gestion des disponibilités :
