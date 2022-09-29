@@ -4,7 +4,6 @@ import { Renting } from "../../models/Renting"
 import Nav from "../../components/layout/nav/Nav"
 import Table from "../../components/layout/table/Table"
 import Panel from "../../components/features/shared/panel/Panel"
-import PanelButton from "../../components/features/shared/panelButton/PanelButton"
 
 const Rentings = () => {
   const [rentingsData, setRentingsData] = useState<Renting[]>([])
@@ -20,8 +19,7 @@ const Rentings = () => {
     <>
       <h2>Rentings</h2>
       <Nav />
-      <PanelButton type="rentings" />
-      <Panel type="rentings" />
+      <Panel type="rentings" button="Nouvelle Location" />
       <Table type="rentings" tableData={rentingsData} />
     </>
   )
