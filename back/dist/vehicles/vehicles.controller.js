@@ -27,13 +27,13 @@ let VehiclesController = class VehiclesController {
         return this.vehiclesService.findAll();
     }
     findOne(id) {
-        return this.vehiclesService.findOne(+id);
+        return this.vehiclesService.findOne(id);
     }
     update(id, updateVehicleDto) {
-        return this.vehiclesService.update(+id, updateVehicleDto);
+        return this.vehiclesService.update(id, updateVehicleDto);
     }
     delete(id) {
-        return this.vehiclesService.delete(+id);
+        return this.vehiclesService.delete(id);
     }
 };
 __decorate([

@@ -27,7 +27,7 @@ export class VehiclesController {
 
   @Get(':id')
   findOne(@Param('id') id): Promise<Vehicle> {
-    return this.vehiclesService.findOne(+id);
+    return this.vehiclesService.findOne(id);
   }
 
   @Put(':id')
@@ -35,11 +35,11 @@ export class VehiclesController {
     @Param('id') id,
     @Body() updateVehicleDto: CreateVehicleDto,
   ): Promise<Vehicle> {
-    return this.vehiclesService.update(+id, updateVehicleDto);
+    return this.vehiclesService.update(id, updateVehicleDto);
   }
 
   @Delete(':id')
   delete(@Param('id') id): Promise<Vehicle> {
-    return this.vehiclesService.delete(+id);
+    return this.vehiclesService.delete(id);
   }
 }

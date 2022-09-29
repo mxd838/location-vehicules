@@ -18,15 +18,15 @@ export class ClientsService {
     return await this.clientModel.find();
   }
 
-  async findOne(id: number): Promise<Client> {
+  async findOne(id: string): Promise<Client> {
     return await this.clientModel.findById({ _id: id });
   }
 
-  async update(id: number, client: Client): Promise<Client> {
+  async update(id: string, client: Client): Promise<Client> {
     return await this.clientModel.findByIdAndUpdate(id, client, { new: true });
   }
 
-  async delete(id: number): Promise<Client> {
+  async delete(id: string): Promise<Client> {
     return await this.clientModel.findByIdAndRemove(id);
   }
 }

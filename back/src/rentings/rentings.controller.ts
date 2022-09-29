@@ -27,7 +27,7 @@ export class RentingsController {
 
   @Get(':id')
   findOne(@Param('id') id): Promise<Renting> {
-    return this.rentingsService.findOne(+id);
+    return this.rentingsService.findOne(id);
   }
 
   @Put(':id')
@@ -35,11 +35,11 @@ export class RentingsController {
     @Param('id') id: string,
     @Body() updateRentingDto: CreateRentingDto,
   ): Promise<Renting> {
-    return this.rentingsService.update(+id, updateRentingDto);
+    return this.rentingsService.update(id, updateRentingDto);
   }
 
   @Delete(':id')
   delete(@Param('id') id: string) {
-    return this.rentingsService.delete(+id);
+    return this.rentingsService.delete(id);
   }
 }

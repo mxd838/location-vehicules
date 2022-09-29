@@ -5,7 +5,7 @@ export declare class VehiclesService {
     constructor(vehicleModel: Model<Vehicle>);
     create(vehicle: Vehicle): Promise<Vehicle>;
     findAll(): Promise<Vehicle[]>;
-    findOne(id: number): Promise<Vehicle>;
-    update(id: number, vehicle: Vehicle): Promise<Vehicle>;
-    delete(id: number): Promise<Vehicle>;
+    findOne(id: string): Promise<Vehicle>;
+    update(id: string, vehicle: Vehicle): Promise<Vehicle>;
+    delete(id: string): Promise<Vehicle>;
 }

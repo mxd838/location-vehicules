@@ -5,7 +5,7 @@ export declare class RentingsService {
     constructor(rentingModel: Model<Renting>);
     create(renting: Renting): Promise<Renting>;
     findAll(): Promise<Renting[]>;
-    findOne(id: number): Promise<Renting>;
-    update(id: number, renting: Renting): Promise<Renting>;
-    delete(id: number): Promise<Renting>;
+    findOne(id: string): Promise<Renting>;
+    update(id: string, renting: Renting): Promise<Renting>;
+    delete(id: string): Promise<Renting>;
 }

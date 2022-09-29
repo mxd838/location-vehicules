@@ -27,7 +27,7 @@ export class ClientsController {
 
   @Get(':id')
   findOne(@Param('id') id): Promise<Client> {
-    return this.clientsService.findOne(+id);
+    return this.clientsService.findOne(id);
   }
 
   @Put(':id')
@@ -35,11 +35,11 @@ export class ClientsController {
     @Param('id') id,
     @Body() updateClientDto: CreateClientDto,
   ): Promise<Client> {
-    return this.clientsService.update(+id, updateClientDto);
+    return this.clientsService.update(id, updateClientDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.clientsService.delete(+id);
+    return this.clientsService.delete(id);
   }
 }

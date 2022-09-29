@@ -27,13 +27,13 @@ let RentingsController = class RentingsController {
         return this.rentingsService.findAll();
     }
     findOne(id) {
-        return this.rentingsService.findOne(+id);
+        return this.rentingsService.findOne(id);
     }
     update(id, updateRentingDto) {
-        return this.rentingsService.update(+id, updateRentingDto);
+        return this.rentingsService.update(id, updateRentingDto);
     }
     delete(id) {
-        return this.rentingsService.delete(+id);
+        return this.rentingsService.delete(id);
     }
 };
 __decorate([

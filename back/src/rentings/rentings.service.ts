@@ -18,17 +18,17 @@ export class RentingsService {
     return await this.rentingModel.find();
   }
 
-  async findOne(id: number): Promise<Renting> {
+  async findOne(id: string): Promise<Renting> {
     return await this.rentingModel.findById({ _id: id });
   }
 
-  async update(id: number, renting: Renting): Promise<Renting> {
+  async update(id: string, renting: Renting): Promise<Renting> {
     return await this.rentingModel.findByIdAndUpdate(id, renting, {
       new: true,
     });
   }
 
-  async delete(id: number): Promise<Renting> {
+  async delete(id: string): Promise<Renting> {
     return await this.rentingModel.findByIdAndRemove(id);
   }
 }

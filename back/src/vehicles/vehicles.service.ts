@@ -18,17 +18,17 @@ export class VehiclesService {
     return await this.vehicleModel.find();
   }
 
-  async findOne(id: number): Promise<Vehicle> {
+  async findOne(id: string): Promise<Vehicle> {
     return await this.vehicleModel.findById({ _id: id });
   }
 
-  async update(id: number, vehicle: Vehicle): Promise<Vehicle> {
+  async update(id: string, vehicle: Vehicle): Promise<Vehicle> {
     return await this.vehicleModel.findByIdAndUpdate(id, vehicle, {
       new: true,
     });
   }
 
-  async delete(id: number): Promise<Vehicle> {
+  async delete(id: string): Promise<Vehicle> {
     return await this.vehicleModel.findByIdAndRemove(id);
   }
 }
