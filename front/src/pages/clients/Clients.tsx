@@ -1,5 +1,4 @@
-import Nav from "../../layout/nav/Nav"
-
+import Nav from "../../components/layout/nav/Nav"
 const Clients = () => {
   return (
     <>
