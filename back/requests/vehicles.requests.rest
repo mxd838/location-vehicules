@@ -5,12 +5,12 @@ POST http://localhost:3000/vehicles
 content-type: application/json
 
 {
-    "type": "berline",
-    "brand": "mattel",
-    "model": "lettam",
-    "licensePlate": "XX-123-yy",
+    "type": "suv",
+    "brand": "volkswagen",
+    "model": "blala",
+    "licensePlate": "XX-126-yy",
     "state": "A",
-    "pricePerDay": 250
+    "pricePerDay": 300
 }
 
 
