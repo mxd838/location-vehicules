@@ -14,6 +14,7 @@ Les fonctionnalités se répartissent entre la gestion des véhicules, la gestio
 ### locations
 - _lister les locations en cours_
 - pouvoir louer un véhicule disponible pour un utilisateur enregistré
+- savoir d'un seul coup d'oeil quels sont les véhicules disponibles (par défaut afficher la disponibilité pour la date du jour)
 - enregistrer une date de début de location
 - enregistrer une date de fin de location
 - _modifier les données d'une location_

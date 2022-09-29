@@ -1,0 +1,28 @@
+GET http://localhost:3000/clients
+
+###
+POST http://localhost:3000/clients
+content-type: application/json
+
+{
+    "lastName": "Martin",
+    "firstName": "Jean-Jacques",
+    "birthdate": "19790506",
+    "email": "martin.jj@gmail.com",
+    "phone": "+331234567889"
+}
+
+###
+GET http://localhost:3000/clients/6334990356c62d12e6ee46cd
+
+
+###
+PUT http://localhost:3000/clients/6334990356c62d12e6ee46cd
+content-type: application/json
+
+{
+    "email": "bouyaka@hotmail.fr"
+}
+
+###
+DELETE http://localhost:3000/clients/6334990356c62d12e6ee46cd

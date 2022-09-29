@@ -1,0 +1,31 @@
+GET http://localhost:3000/vehicles
+
+###
+POST http://localhost:3000/vehicles
+content-type: application/json
+
+{
+    "type": "berline",
+    "brand": "mattel",
+    "model": "lettam",
+    "licensePlate": "XX-123-yy",
+    "state": "A",
+    "pricePerDay": 250
+}
+
+
+###
+GET http://localhost:3000/vehicles/63349c4c616fdfdee1fe04d4
+
+
+###
+PUT http://localhost:3000/vehicles/63349c4c616fdfdee1fe04d4
+content-type: application/json
+
+{
+    "pricePerDay": 185
+}
+
+###
+DELETE http://localhost:3000/vehicles/63349c4c616fdfdee1fe04d4
+
