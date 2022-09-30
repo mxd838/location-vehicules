@@ -3,6 +3,7 @@ import ClientsService from "../../services/Clients.service"
 import { Client } from "../../models/Client"
 import Nav from "../../components/layout/nav/Nav"
 import Table from "../../components/layout/table/Table"
+import Panel from "../../components/features/shared/panel/Panel"
 
 const Clients = () => {
   const [clientsData, setClientsData] = useState<Client[]>([])
@@ -19,7 +20,8 @@ const Clients = () => {
     <>
       <h2>Clients</h2>
       <Nav />
-      <Table type="clients" tableData={clientsData} />
+      <Panel resource="clients" button="Nouveau Client" />
+      <Table resource="clients" tableData={clientsData} />
     </>
   )
 }

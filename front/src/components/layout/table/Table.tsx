@@ -1,14 +1,23 @@
 import DataRow from "./dataRow/DataRow"
 import HeaderRow from "./headerRow/HeaderRow"
 
-const Table = ({ type, tableData }: any) => {
+const Table = ({ resource, tableData }: any) => {
   let columnNames: any = []
   // TODO
   // make a switch with 3 possibilities
-  if (type === "clients") {
+  if (resource === "clients") {
     columnNames = ["Nom", "Prénom", "Date de naissance", "E-mail", "Téléphone"]
-  } else if (type === "rentings") {
+  } else if (resource === "rentings") {
     columnNames = ["Véhicule", "Client", "Date début", "Date fin"]
+  } else if (resource === "vehicles") {
+    columnNames = [
+      "Type",
+      "Marque",
+      "Modèle",
+      "Immatriculation",
+      "État",
+      "Prix à la journée"
+    ]
   }
   console.log(tableData)
   return (
