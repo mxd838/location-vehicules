@@ -1,14 +1,20 @@
+import { useState } from "react"
 import CreateForm from "../../createForm/CreateForm"
 
 const Panel = (props: any) => {
-  // TODO
-  // -- handleClick on the button
-  // -- change state of display to show the create form panel
+  const [showPanel, setShowPanel] = useState(false)
+
+  const togglePanelDisplay = () => {
+    setShowPanel(!showPanel)
+  }
+
   return (
     <div>
       <h3>Panel {props.type}</h3>
-      <button className="togglePanel">{props.button}</button>
-      <CreateForm type={props.type} />
+      <button className="togglePanel" onClick={togglePanelDisplay}>
+        {props.button}
+      </button>
+      {showPanel ? <CreateForm type={props.type} /> : <></>}
     </div>
   )
 }
