@@ -1,7 +1,8 @@
-const DateInput = () => {
+const DateInput = (props: any) => {
   return (
     <>
-      <h4>Date Input</h4>
+      <label htmlFor={props.type}>{props.label}</label>
+      <input type="date" name={props.type} id={props.type} />
     </>
   )
 }

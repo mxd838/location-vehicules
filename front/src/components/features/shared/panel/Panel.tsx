@@ -1,5 +1,5 @@
 import { useState } from "react"
-import CreateForm from "../../createForm/CreateForm"
+import Form from "../../Form/Form"
 
 const Panel = (props: any) => {
   const [showPanel, setShowPanel] = useState(false)
@@ -14,7 +14,7 @@ const Panel = (props: any) => {
       <button className="togglePanel" onClick={togglePanelDisplay}>
         {props.button}
       </button>
-      {showPanel ? <CreateForm type={props.type} /> : <></>}
+      {showPanel ? <Form resource={props.resource} /> : <></>}
     </div>
   )
 }

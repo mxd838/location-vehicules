@@ -4,15 +4,15 @@ import NumberInput from "../shared/numberInput/NumberInput"
 import SelectInput from "../shared/selectInput/SelectInput"
 import TextInput from "../shared/textInput/TextInput"
 
-const CreateForm = (props: any) => {
-  if (props.type === "rentings") {
+const Form = (props: any) => {
+  if (props.resource === "rentings") {
     return (
       <>
         <h3>Renting Form</h3>
         <form>
           {/* date */}
-          <DateInput />
-          <DateInput />
+          <DateInput type="begin" label="Début: " />
+          <DateInput type="end" label="Fin: " />
           {/* name */}
           <SelectInput />
           {/* link to new user creation */}
@@ -27,7 +27,7 @@ const CreateForm = (props: any) => {
         </form>
       </>
     )
-  } else if (props.type === "clients") {
+  } else if (props.resource === "clients") {
     return (
       <>
         <h3>Client form</h3>
@@ -41,13 +41,13 @@ const CreateForm = (props: any) => {
           {/* tel */}
           <TextInput />
           {/* birthday */}
-          <DateInput />
+          <DateInput type="birthday" label="Date de naissance: " />
           {/* validation button */}
           <Button />
         </form>
       </>
     )
-  } else if (props.type === "vehicles") {
+  } else if (props.resource === "vehicles") {
     return (
       <>
         <h3>Vehicle form</h3>
@@ -72,4 +72,4 @@ const CreateForm = (props: any) => {
   }
 }
 
-export default CreateForm
+export default Form

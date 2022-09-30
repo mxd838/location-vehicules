@@ -7,6 +7,8 @@
         - pass each value of data to data cell
 - [ ] typer toutes les props correctement
 - [ ] route 404
+- [ ] css minimal pour visibilité
+- [ ] arborescence des composants modifyForm
 ## Back
 - [ ]   verifier psce ou non id dans dto/interface/schema
 ## Config
