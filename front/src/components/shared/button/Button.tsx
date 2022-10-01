@@ -1,7 +1,7 @@
-const Button = () => {
+const Button = (props: any) => {
   return (
     <>
-      <h4>Button</h4>
+      <button>{props.name}</button>
     </>
   )
 }

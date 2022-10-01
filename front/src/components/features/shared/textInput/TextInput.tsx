@@ -1,7 +1,8 @@
-const TextInput = () => {
+const TextInput = (props: any) => {
   return (
     <>
-      <h4>Text input</h4>
+      <label htmlFor={props.category}>{props.name}</label>
+      <input type="text" name={props.category} id={props.category} />
     </>
   )
 }

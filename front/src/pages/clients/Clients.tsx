@@ -20,7 +20,7 @@ const Clients = () => {
     <>
       <h2>Clients</h2>
       <Nav />
-      <Panel resource="clients" button="Nouveau Client" />
+      <Panel resource="clients" button="Nouveau Client" type="creation" />
       <Table resource="clients" tableData={clientsData} />
     </>
   )

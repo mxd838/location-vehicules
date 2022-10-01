@@ -19,7 +19,6 @@ const Table = ({ resource, tableData }: any) => {
       "Prix à la journée"
     ]
   }
-  console.log(tableData)
   return (
     <>
       <div className="table">
