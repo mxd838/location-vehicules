@@ -1,7 +1,9 @@
+import "./DataCell.scss"
+
 const DataCell = ({ cellData }: any) => {
   return (
     <>
-      <div className={cellData[0]}>{cellData[1]}</div>
+      <div className="dataCell">{cellData[1]}</div>
     </>
   )
 }

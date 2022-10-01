@@ -1,4 +1,5 @@
 import DataCell from "../dataCell/DataCell"
+import "./DataRow.scss"
 
 const DataRow = ({ rowData }: any) => {
   // TODO
@@ -12,11 +13,11 @@ const DataRow = ({ rowData }: any) => {
   }
 
   return (
-    <>
+    <div className="dataRow">
       {rowDataArray.map((cellData: any, index: any) => (
         <DataCell key={index} cellData={cellData} />
       ))}
-    </>
+    </div>
   )
 }
 
