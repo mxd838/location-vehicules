@@ -1,10 +1,10 @@
 import DataRow from "./dataRow/DataRow"
 import HeaderRow from "./headerRow/HeaderRow"
+import "./Table.scss"
 
 const Table = ({ resource, tableData }: any) => {
   let columnNames: any = []
-  // TODO
-  // make a switch with 3 possibilities
+
   if (resource === "clients") {
     columnNames = ["Nom", "Prénom", "Date de naissance", "E-mail", "Téléphone"]
   } else if (resource === "rentings") {
@@ -22,13 +22,12 @@ const Table = ({ resource, tableData }: any) => {
   console.log(tableData)
   return (
     <>
-      <h2>Table</h2>
-      {columnNames.map((columnName: any, index: string) => (
-        <HeaderRow key={columnName} name={columnName} />
-      ))}
-      {tableData.map((rowData: any, index: string) => (
-        <DataRow key={index} rowData={rowData} />
-      ))}
+      <div className="table">
+        <HeaderRow columnNames={columnNames} />
+        {tableData.map((rowData: any, index: string) => (
+          <DataRow key={index} rowData={rowData} />
+        ))}
+      </div>
     </>
   )
 }
