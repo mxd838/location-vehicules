@@ -13,17 +13,17 @@ const VehicleForm = () => {
       vehicle form
       <form onSubmit={submitHandler}>
         {/* type */}
-        <SelectInput />
+        <SelectInput type="vehicleType" label="Type: " />
         {/* brand */}
-        <SelectInput />
+        <SelectInput type="vehicleBrand" label="Marque: " />
         {/* model */}
-        <SelectInput />
+        <SelectInput type="vehicleModel" label="Modèle: " />
         {/* licence plate */}
-        <TextInput />
+        <TextInput category="licensePlate" name="Immatriculation: " />
         {/* price per day */}
-        <NumberInput />
+        <NumberInput category="price" name="Prix: " min="50" step="10" />
         {/* validation button */}
-        <Button />
+        <Button name="Valider" />
       </form>
     </div>
   )

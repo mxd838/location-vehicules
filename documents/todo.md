@@ -9,6 +9,7 @@
 - [ ] route 404
 - [ ] css minimal pour visibilité
 - [ ] arborescence des composants modifyForm
+- [ ] see poss generic input component (at least email, text and phone)
 ## Back
 - [ ]   verifier psce ou non id dans dto/interface/schema
 ## Config

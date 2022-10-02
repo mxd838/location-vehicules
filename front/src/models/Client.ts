@@ -1,5 +1,5 @@
 export type Client = {
-  _id: string
+  _id?: string
   lastName: string
   firstName: string
   birthdate: string
