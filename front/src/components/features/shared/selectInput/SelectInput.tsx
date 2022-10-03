@@ -4,7 +4,7 @@ const SelectInput = (props: any) => {
   return (
     <>
       <label htmlFor={props.type}>{props.label}</label>
-      <select name={props.type} id={props.type}>
+      <select name={props.type} id={props.type} onChange={props.dataHandler}>
         <option value={`${props.type}-1`}>{`${props.type}-1`}</option>
         <option value={`${props.type}-2`}>{`${props.type}-2`}</option>
         <option value={`${props.type}-3`}>{`${props.type}-3`}</option>

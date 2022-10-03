@@ -8,6 +8,8 @@ import TextInput from "../../shared/textInput/TextInput"
 
 // TODO
 // - type all files with this model
+// - send create request with userdata
+// - do the modifyForm variation
 
 const ClientForm = () => {
   const clientFormData: Client = {
@@ -21,6 +23,14 @@ const ClientForm = () => {
 
   const inputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
+    console.log(
+      "Name: ",
+      e.target.name,
+      " ;Value: ",
+      e.target.value,
+      " type of Value",
+      typeof e.target.value
+    )
     setResponseBody({ ...responseBody, [name]: value })
   }
 
@@ -40,13 +50,29 @@ const ClientForm = () => {
           dataHandler={(e: any) => inputChangeHandler(e)}
         />
         {/* prenom */}
-        <TextInput category="firstName" name="Prénom: " />
+        <TextInput
+          category="firstName"
+          name="Prénom: "
+          dataHandler={(e: any) => inputChangeHandler(e)}
+        />
         {/* email */}
-        <EmailInput category="email" name="E-Mail: " />
+        <EmailInput
+          category="email"
+          name="E-Mail: "
+          dataHandler={(e: any) => inputChangeHandler(e)}
+        />
         {/* tel */}
-        <TelInput category="phone" name="Téléphone: " />
+        <TelInput
+          category="phone"
+          name="Téléphone: "
+          dataHandler={(e: any) => inputChangeHandler(e)}
+        />
         {/* birthday */}
-        <DateInput type="birthday" label="Date de naissance: " />
+        <DateInput
+          category="birthdate"
+          name="Date de naissance: "
+          dataHandler={(e: any) => inputChangeHandler(e)}
+        />
         {/* validation button */}
         <Button name="Valider" />
       </form>

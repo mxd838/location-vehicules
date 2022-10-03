@@ -1,8 +1,13 @@
 const EmailInput = (props: any) => {
   return (
     <>
-      <label htmlFor={props.email}>{props.name}</label>
-      <input type="email" name={props.email} id={props.email} />
+      <label htmlFor={props.category}>{props.name}</label>
+      <input
+        type="email"
+        name={props.category}
+        id={props.category}
+        onChange={props.dataHandler}
+      />
     </>
   )
 }

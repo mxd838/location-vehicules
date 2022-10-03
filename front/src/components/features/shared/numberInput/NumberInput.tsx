@@ -8,6 +8,7 @@ const NumberInput = (props: any) => {
         id={props.category}
         min={props.min}
         step={props.step}
+        onChange={props.dataHandler}
       />
     </>
   )
