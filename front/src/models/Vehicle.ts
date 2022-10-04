@@ -1,5 +1,5 @@
 export type Vehicle = {
-  _id: string
+  _id?: string
   type: string
   brand: string
   model: string

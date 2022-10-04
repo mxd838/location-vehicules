@@ -1,3 +1,4 @@
+import moment from "moment"
 import React, { useState } from "react"
 import { Client } from "../../../../models/Client"
 import Button from "../../../shared/button/Button"
@@ -15,22 +16,15 @@ const ClientForm = () => {
   const clientFormData: Client = {
     lastName: "",
     firstName: "",
-    birthdate: "",
+    birthdate: moment().subtract(18, "years").format("YYYY-MM-DD"),
     email: "",
     phone: ""
   }
+
   const [responseBody, setResponseBody] = useState<Client>(clientFormData)
 
   const inputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
-    console.log(
-      "Name: ",
-      e.target.name,
-      " ;Value: ",
-      e.target.value,
-      " type of Value",
-      typeof e.target.value
-    )
     setResponseBody({ ...responseBody, [name]: value })
   }
 
