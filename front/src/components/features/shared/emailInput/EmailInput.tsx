@@ -1,9 +1,9 @@
-const TextInput = (props: any) => {
+const EmailInput = (props: any) => {
   return (
     <>
       <label htmlFor={props.category}>{props.name}</label>
       <input
-        type="text"
+        type="email"
         name={props.category}
         id={props.category}
         onChange={props.dataHandler}
@@ -12,4 +12,4 @@ const TextInput = (props: any) => {
   )
 }
 
-export default TextInput
+export default EmailInput

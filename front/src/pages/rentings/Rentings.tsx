@@ -19,7 +19,7 @@ const Rentings = () => {
     <>
       <h2>Rentings</h2>
       <Nav />
-      <Panel resource="rentings" button="Nouvelle Location" />
+      <Panel resource="rentings" button="Nouvelle Location" type="creation" />
       <Table resource="rentings" tableData={rentingsData} />
     </>
   )

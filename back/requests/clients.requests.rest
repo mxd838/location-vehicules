@@ -5,10 +5,10 @@ POST http://localhost:3000/clients
 content-type: application/json
 
 {
-    "lastName": "Dupuis",
-    "firstName": "Jean-Jacques",
-    "birthdate": "19790506",
-    "email": "martin.jj@gmail.com",
+    "lastName": "Martin",
+    "firstName": "Olivier",
+    "birthdate": "19801106",
+    "email": "martin.o@gmail.com",
     "phone": "+331234567889"
 }
 

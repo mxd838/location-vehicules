@@ -1,5 +1,5 @@
 export type Renting = {
-  _id: string
+  _id?: string
   vehicleId: string
   clientId: string
   beginDate: string

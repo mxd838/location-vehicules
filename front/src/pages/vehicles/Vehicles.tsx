@@ -20,7 +20,7 @@ const Vehicles = () => {
     <>
       <h2>Vehicles</h2>
       <Nav />
-      <Panel resource="vehicles" button="Nouveau Véhicule" />
+      <Panel resource="vehicles" button="Nouveau Véhicule" type="creation" />
       <Table resource="vehicles" tableData={vehiclesData} />
     </>
   )
