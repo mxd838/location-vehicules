@@ -1,6 +1,7 @@
 import moment from "moment"
 import React, { useState } from "react"
 import { Client } from "../../../../models/Client"
+import ClientsService from "../../../../services/Clients.service"
 import Button from "../../../shared/button/Button"
 import DateInput from "../../shared/dateInput/DateInput"
 import EmailInput from "../../shared/emailInput/EmailInput"
@@ -31,6 +32,9 @@ const ClientForm = () => {
   const submitHandler = (e: any) => {
     e.preventDefault()
     console.log(responseBody)
+    // TODO
+    // implement axios request
+    ClientsService.create(responseBody)
   }
 
   return (
