@@ -24,7 +24,7 @@ const Table = ({ resource, tableData }: any) => {
       <div className="table">
         <HeaderRow columnNames={columnNames} />
         {tableData.map((rowData: any, index: string) => (
-          <DataRow key={index} rowData={rowData} />
+          <DataRow key={index} rowData={rowData} resource={resource} />
         ))}
       </div>
     </>
