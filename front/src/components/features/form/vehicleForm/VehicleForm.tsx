@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Vehicle } from "../../../../models/Vehicle"
+import VehiclesService from "../../../../services/Vehicles.service"
 import Button from "../../../shared/button/Button"
 import NumberInput from "../../shared/numberInput/NumberInput"
 import RadioInputGroup from "../../shared/radioInputGroup/RadioInputGroup"
@@ -26,6 +27,7 @@ const VehicleForm = () => {
   const submitHandler = (e: any) => {
     e.preventDefault()
     console.log(responseBody)
+    VehiclesService.create(responseBody)
   }
   return (
     <div>

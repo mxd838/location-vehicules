@@ -1,6 +1,7 @@
 import moment from "moment"
 import { useState } from "react"
 import { Renting } from "../../../../models/Renting"
+import RentingsService from "../../../../services/Rentings.service"
 import Button from "../../../shared/button/Button"
 import DateInput from "../../shared/dateInput/DateInput"
 import SelectInput from "../../shared/selectInput/SelectInput"
@@ -26,6 +27,7 @@ const RentingForm = () => {
   const submitHandler = (e: any) => {
     e.preventDefault()
     console.log(responseBody)
+    RentingsService.create(responseBody)
   }
   return (
     <div>
