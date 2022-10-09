@@ -2,14 +2,14 @@ import DataRow from "./dataRow/DataRow"
 import HeaderRow from "./headerRow/HeaderRow"
 import "./Table.scss"
 
-const Table = ({ resource, tableData }: any) => {
+const Table = (props: any) => {
   let columnNames: any = []
 
-  if (resource === "clients") {
+  if (props.resource === "clients") {
     columnNames = ["Nom", "Prénom", "Date de naissance", "E-mail", "Téléphone"]
-  } else if (resource === "rentings") {
+  } else if (props.resource === "rentings") {
     columnNames = ["Véhicule", "Client", "Date début", "Date fin"]
-  } else if (resource === "vehicles") {
+  } else if (props.resource === "vehicles") {
     columnNames = [
       "Type",
       "Marque",
@@ -23,8 +23,8 @@ const Table = ({ resource, tableData }: any) => {
     <>
       <div className="table">
         <HeaderRow columnNames={columnNames} />
-        {tableData.map((rowData: any, index: string) => (
-          <DataRow key={index} rowData={rowData} />
+        {props.tableData.map((rowData: any, index: string) => (
+          <DataRow key={index} rowData={rowData} resource={props.resource} />
         ))}
       </div>
     </>

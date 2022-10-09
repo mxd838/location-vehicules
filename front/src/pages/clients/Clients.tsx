@@ -4,9 +4,16 @@ import { Client } from "../../models/Client"
 import Nav from "../../components/layout/nav/Nav"
 import Table from "../../components/layout/table/Table"
 import Panel from "../../components/features/shared/panel/Panel"
+import PanelButton from "../../components/features/shared/panelButton/PanelButton"
 
 const Clients = () => {
   const [clientsData, setClientsData] = useState<Client[]>([])
+
+  const [showPanel, setShowPanel] = useState(false)
+
+  const togglePanelDisplay = () => {
+    setShowPanel(!showPanel)
+  }
 
   useEffect(() => {
     ClientsService.getAll().then((response) => {
@@ -20,7 +27,12 @@ const Clients = () => {
     <>
       <h2>Clients</h2>
       <Nav />
-      <Panel resource="clients" button="Nouveau Client" type="creation" />
+      <PanelButton
+        handleClick={togglePanelDisplay}
+        name="Nouveau Client"
+        class="togglePanel"
+      />
+      <Panel resource="clients" showPanel={showPanel} type="creation" />
       <Table resource="clients" tableData={clientsData} />
     </>
   )
