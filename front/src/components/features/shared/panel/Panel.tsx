@@ -3,6 +3,12 @@ import Form from "../../form/Form"
 import PanelButton from "../panelButton/PanelButton"
 
 const Panel = (props: any) => {
+  // TODO
+  // conditional rendering
+  // if props received == creation
+  // --> call panelButton component
+  // if not
+  // --> toggle function on data row (see relevant component)
   const [showPanel, setShowPanel] = useState(false)
 
   const togglePanelDisplay = () => {
