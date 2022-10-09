@@ -10,6 +10,7 @@
 - [X] css minimal pour visibilité
 - [ ] arborescence des composants modifyForm
     - [ ] retirer toggle du panel pour le mettre dans le parent qui l'appelle (datarow pour modify et page/* pour create)
+    - [ ] mettre un event listenr click sur chaque datarow et lier au toggle panel
 - [ ] see poss generic input component (at least email, text and phone)
 ## Back
 - [ ]   verifier psce ou non id dans dto/interface/schema
