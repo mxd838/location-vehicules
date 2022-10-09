@@ -2,10 +2,9 @@ import React, { useState } from "react"
 import { Vehicle } from "../../../../models/Vehicle"
 import VehiclesService from "../../../../services/Vehicles.service"
 import Button from "../../../shared/button/Button"
-import NumberInput from "../../shared/numberInput/NumberInput"
+import GenericInput from "../../shared/genericInput/GenericInput"
 import RadioInputGroup from "../../shared/radioInputGroup/RadioInputGroup"
 import SelectInput from "../../shared/selectInput/SelectInput"
-import TextInput from "../../shared/textInput/TextInput"
 
 const VehicleForm = () => {
   const vehicleFormData: Vehicle = {
@@ -59,13 +58,13 @@ const VehicleForm = () => {
           dataHandler={(e: any) => inputChangeHandler(e)}
         />
         {/* licence plate */}
-        <TextInput
+        <GenericInput
           category="licensePlate"
           name="Immatriculation: "
           dataHandler={(e: any) => inputChangeHandler(e)}
         />
         {/* price per day */}
-        <NumberInput
+        <GenericInput
           category="pricePerDay"
           name="Prix: "
           min="50"

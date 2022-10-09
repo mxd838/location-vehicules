@@ -4,9 +4,7 @@ import { Client } from "../../../../models/Client"
 import ClientsService from "../../../../services/Clients.service"
 import Button from "../../../shared/button/Button"
 import DateInput from "../../shared/dateInput/DateInput"
-import EmailInput from "../../shared/emailInput/EmailInput"
-import TelInput from "../../shared/telInput/TelInput"
-import TextInput from "../../shared/textInput/TextInput"
+import GenericInput from "../../shared/genericInput/GenericInput"
 
 // TODO
 // - type all files with this model
@@ -42,25 +40,25 @@ const ClientForm = () => {
       Client Form
       <form onSubmit={submitHandler}>
         {/* nom */}
-        <TextInput
+        <GenericInput
           category="lastName"
           name="Nom: "
           dataHandler={(e: any) => inputChangeHandler(e)}
         />
         {/* prenom */}
-        <TextInput
+        <GenericInput
           category="firstName"
           name="Prénom: "
           dataHandler={(e: any) => inputChangeHandler(e)}
         />
         {/* email */}
-        <EmailInput
+        <GenericInput
           category="email"
           name="E-Mail: "
           dataHandler={(e: any) => inputChangeHandler(e)}
         />
         {/* tel */}
-        <TelInput
+        <GenericInput
           category="phone"
           name="Téléphone: "
           dataHandler={(e: any) => inputChangeHandler(e)}
